@@ -1,17 +1,25 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import network_icon from '../public/icons/network.png'
+import chat_icon from '../public/icons/chat.png'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>AutoSME</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className="sidebar">
+        <img src={network_icon} alt="network icon" />
+        <img src={chat_icon} alt="chat icon" />
+      </div>
+
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to AutoSME
         </h1>
 
         <p className={styles.description}>
@@ -37,15 +45,15 @@ export default function Home() {
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          <Link
+            href="/blog/first-post"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Blog &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Check out the AutoSME blog!
             </p>
-          </a>
+          </Link>
         </div>
       </main>
 
