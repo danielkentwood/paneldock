@@ -1,20 +1,32 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import network_icon from '../public/icons/network.png'
-import chat_icon from '../public/icons/chat.png'
 
 export default function Home() {
-  return (
+    return (
     <div className={styles.container}>
       <Head>
         <title>AutoSME</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="sidebar">
-        <img src={network_icon} alt="network icon" />
-        <img src={chat_icon} alt="chat icon" />
+      <div className={styles.sidebar}>
+        <div className={styles.iconContainer} data-tooltip="New graph window">
+          <img width="48" height="48" src="https://img.icons8.com/ios/50/1A1A1A/share-2--v1.png" alt="share-2--v1" className={styles.sidebarImg}/>
+        </div>
+
+        <div className={styles.iconContainer} data-tooltip="New node details window">
+          <img width="48" height="48" src="https://img.icons8.com/ios/50/000000/microscope.png" alt="microscope" className={styles.sidebarImg}/>
+        </div>
+
+        <div className={styles.iconContainer} data-tooltip="New clinical journey explorer window (coming soon!)">
+          <img width="48" height="48" src="https://img.icons8.com/ios/50/1A1A1A/sankey.png" alt="sankey" className={styles.sidebarImg}/>
+        </div>
+
+        <div className={styles.iconContainer} data-tooltip="New AI chat window (coming soon!)">
+          <img width="48" height="48" src="https://img.icons8.com/ios/50/background-remover.png" alt="background-remover" className={styles.sidebarImg} />
+        </div>
+
       </div>
 
       <main>
@@ -136,4 +148,5 @@ export default function Home() {
       `}</style>
     </div>
   );
+
 }
