@@ -10,25 +10,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.sidebar}>
-        <div className={styles.iconContainer} data-tooltip="New graph window">
-          <img width="48" height="48" src="https://img.icons8.com/ios/50/1A1A1A/share-2--v1.png" alt="share-2--v1" className={styles.sidebarImg}/>
-        </div>
-
-        <div className={styles.iconContainer} data-tooltip="New node details window">
-          <img width="48" height="48" src="https://img.icons8.com/ios/50/000000/microscope.png" alt="microscope" className={styles.sidebarImg}/>
-        </div>
-
-        <div className={styles.iconContainer} data-tooltip="New clinical journey explorer window (coming soon!)">
-          <img width="48" height="48" src="https://img.icons8.com/ios/50/1A1A1A/sankey.png" alt="sankey" className={styles.sidebarImg}/>
-        </div>
-
-        <div className={styles.iconContainer} data-tooltip="New AI chat window (coming soon!)">
-          <img width="48" height="48" src="https://img.icons8.com/ios/50/background-remover.png" alt="background-remover" className={styles.sidebarImg} />
-        </div>
-
-      </div>
-
       <main>
         <h1 className={styles.title}>
           Welcome to AutoSME
@@ -44,10 +25,13 @@ export default function Home() {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link
+            href="/explorer"
+            className={styles.card}
+          >
+            <h3>Graph Explorer &rarr;</h3>
+            <p>Explore our integrated, interactive knowledge graphs.</p>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
